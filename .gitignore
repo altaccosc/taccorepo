@@ -8,5 +8,6 @@ build/
 *.iml
 repo/
 apk/
+release/
 gen
 generated-src/
