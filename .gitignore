@@ -11,3 +11,4 @@ apk/
 release/
 gen
 generated-src/
+signingkey.jks
