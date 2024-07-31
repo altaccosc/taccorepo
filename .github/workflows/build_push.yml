@@ -15,3 +15,6 @@ jobs:
     steps:
       - name: Clone repo
         uses: actions/checkout@v4
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/actions/wrapper-validation@v3
