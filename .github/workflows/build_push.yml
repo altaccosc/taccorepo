@@ -46,3 +46,21 @@ jobs:
 
       - name: Clean up CI files
         run: rm signingkey.jks
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download APKs
+        uses: actions/download-artifact@v4
+        with:
+          path: ./apk-artifacts
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: temurin
+
+      - name: Tree
+        run: tree
