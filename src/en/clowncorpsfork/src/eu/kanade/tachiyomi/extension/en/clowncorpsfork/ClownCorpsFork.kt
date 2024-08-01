@@ -57,11 +57,7 @@ class ClownCorpsFork : ConfigurableSource, HttpSource() {
 	override fun fetchPopularManga(page: Int): Observable<MangasPage> =
 		Observable.just(MangasPage(listOf(getManga()), hasNextPage = false))
 
-	override fun fetchSearchManga(
-		page: Int,
-		query: String,
-		filters: FilterList,
-	): Observable<MangasPage> {
+	override fun fetchSearchManga(page: Int, query: String, filters: FilterList): Observable<MangasPage> {
 		comicName.split(" ").forEach {
 			if (query.contains(it, true)) {
 				return fetchPopularManga(page)
