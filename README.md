@@ -8,6 +8,8 @@ for teaching me how to do this and for preserving the build files.
 Only tested on Tachiyomi Stable 0.15.3.  
 Not tested with Mihon or any other forks, so your mileage with those may vary.
 
+Run the source: https://github.com/keiyoushi/extensions-source/blob/main/CONTRIBUTING.md#running
+
 ## Usage
 Add the following URL to Tachiyomi's `Settings` > `Browse` > `Extension repos`:
 ```
