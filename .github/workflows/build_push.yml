@@ -47,6 +47,17 @@ jobs:
       - name: Clean up CI files
         run: rm signingkey.jks
 
+# cwd
+# - apk-artifacts/
+# - main
+#   - .github
+#     - scripts/
+# - repo
+#   - apk/
+#   - icon/
+#   - index.json
+#   - index.json.min
+#   - repo.json
   publish:
     runs-on: ubuntu-latest
     needs: build
@@ -61,6 +72,15 @@ jobs:
         with:
           java-version: 17
           distribution: temurin
+
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - name: Move APKs
+        run: python ./main/.github/scripts/move-apks.py
 
       - name: Tree
         run: tree
