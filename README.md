@@ -9,7 +9,10 @@ Only tested on Tachiyomi Stable 0.15.3.
 Not tested with Mihon or any other forks, so your mileage with those may vary.
 
 ## Usage
-Not ready yet.
+Add the following URL to Tachiyomi's `Settings` > `Browse` > `Extension repos`:
+```
+https://raw.githubusercontent.com/altaccosc/taccorepo/repo/index.min.json
+```
 
 ## Disclaimer
 This project does not have any affiliation with the content providers available.
