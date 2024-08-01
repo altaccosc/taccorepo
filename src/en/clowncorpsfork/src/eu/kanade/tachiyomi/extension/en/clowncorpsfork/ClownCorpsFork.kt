@@ -33,7 +33,8 @@ import java.util.Locale
 class ClownCorpsFork : ConfigurableSource, HttpSource() {
 	override val baseUrl = "https://clowncorps.net"
 	override val lang = "en"
-	override val name = "Clown Corps"
+	override val name = "Clown Corps Fork"
+	private val comicName = name.replace("Fork", "").trim()
 	override val supportsLatest = false
 
 	override val client = network.client.newBuilder()
@@ -41,7 +42,7 @@ class ClownCorpsFork : ConfigurableSource, HttpSource() {
 		.build()
 
 	private fun getManga() = SManga.create().apply {
-		title = name
+		title = comicName
 		artist = CREATOR
 		author = CREATOR
 		status = SManga.ONGOING
@@ -61,7 +62,7 @@ class ClownCorpsFork : ConfigurableSource, HttpSource() {
 		query: String,
 		filters: FilterList,
 	): Observable<MangasPage> {
-		name.split(" ").forEach {
+		comicName.split(" ").forEach {
 			if (query.contains(it, true)) {
 				return fetchPopularManga(page)
 			}
