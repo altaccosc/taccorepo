@@ -88,5 +88,8 @@ jobs:
           curl -L "$INSPECTOR_LINK" -o ./Inspector.jar
           java -jar ./Inspector.jar "repo/apk" "output.json" "tmp"
 
+      - name: Print output
+        run: cat output.json
+
       - name: Tree
         run: tree
