@@ -74,8 +74,8 @@ class WeGoTogether : HttpSource() {
 			val amountOfChapters = comicChapters.ownText().split(" ").first().toIntOrNull() ?: continue
 			Log.i("TacLog", "Amount of Chapters: $amountOfChapters")
 
-			//TODO: Get proper date
-			//TODO: Get better sorting
+			// TODO: Get proper date
+			// TODO: Get better sorting
 			if (amountOfChapters == 1) {
 				Log.i("TacLog", "Chapter Title: $comicTitle ($comicUrl)")
 				chapters.add(
