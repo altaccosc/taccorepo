@@ -82,6 +82,7 @@ jobs:
       - name: Checkout repo branch
         uses: actions/checkout@v4
         with:
+          token: ${{ secrets.BOT_PAT }}
           ref: repo
           path: repo
 
@@ -108,3 +109,8 @@ jobs:
 
       - name: Tree
         run: tree
+
+      - name: Deploy repo
+        run: |
+          cd repo
+          ../main/.github/scripts/commit-repo.sh
