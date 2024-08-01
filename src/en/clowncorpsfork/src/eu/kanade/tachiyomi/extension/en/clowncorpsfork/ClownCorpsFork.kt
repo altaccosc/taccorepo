@@ -213,8 +213,7 @@ class ClownCorpsFork : ConfigurableSource, HttpSource() {
 		val authorsNotesPref = SwitchPreferenceCompat(screen.context).apply {
 			key = SETTING_KEY_SHOW_AUTHORS_NOTES
 			title = "Show author's notes"
-			summary =
-				"Enable to see the author's notes at the end of chapters (if they're there)."
+			summary = "Enable to see the author's notes at the end of chapters (if they're there)."
 			setDefaultValue(false)
 		}
 		screen.addPreference(authorsNotesPref)
@@ -234,8 +233,7 @@ class ClownCorpsFork : ConfigurableSource, HttpSource() {
 				val checkValue = newValue as Set<*>
 				if (checkValue.contains(VALUE_CONFIRM)) {
 					clearChapterCache()
-					Toast.makeText(screen.context, "Cleared chapter cache", Toast.LENGTH_SHORT)
-						.show()
+					Toast.makeText(screen.context, "Cleared chapter cache", Toast.LENGTH_SHORT).show()
 				}
 
 				false // Don't actually save the "yes"
