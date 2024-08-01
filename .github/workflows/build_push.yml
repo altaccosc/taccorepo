@@ -104,7 +104,7 @@ jobs:
         run: |
           cat ./repo/repo.json
           cat ./repo/index.json
-          cat ./repo/index.json.min
+          cat ./repo/index.min.json
 
       - name: Tree
         run: tree
