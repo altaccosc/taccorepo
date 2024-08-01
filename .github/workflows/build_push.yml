@@ -91,5 +91,14 @@ jobs:
       - name: Print output
         run: cat output.json
 
+      - name: Create repo
+        run: python ./main/.github/scripts/create-repo.py
+
+      - name: Print index
+        run: |
+          cat ./repo/repo.json
+          cat ./repo/index.json
+          cat ./repo/index.json.min
+
       - name: Tree
         run: tree
