@@ -2,6 +2,7 @@ import html
 import json
 import os
 import re
+import shutil
 import subprocess
 from pathlib import Path
 from zipfile import ZipFile
@@ -18,6 +19,11 @@ LANGUAGE_REGEX = re.compile(r"tachiyomi-([^.]+)")
 REPO_DIR = Path("repo")
 REPO_APK_DIR = REPO_DIR / "apk"
 REPO_ICON_DIR = REPO_DIR / "icon"
+
+try:
+	shutil.rmtree(REPO_ICON_DIR)
+except FileNotFoundError:
+	pass
 
 REPO_ICON_DIR.mkdir(parents=True, exist_ok=True)
 
