@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Tachiyomi: Clown Corps Fork",
+    "pkg": "eu.kanade.tachiyomi.extension.en.clowncorpsfork",
+    "apk": "tachiyomi-en.clowncorpsfork-v1.4.1.apk",
+    "lang": "en",
+    "code": 1,
+    "version": "1.4.1",
+    "nsfw": 0,
+    "hasReadme": 0,
+    "hasChangelog": 0,
+    "sources": [
+      {
+        "name": "Clown Corps",
+        "lang": "en",
+        "id": "285164574089229147",
+        "baseUrl": "https://clowncorps.net",
+        "versionId": 1
+      }
+    ]
+  }
+]
